@@ -2,10 +2,10 @@ import requests
 import json
 
 class Apiintercambiador:
-  
-    #app_url_sandbox = "https://sandbox.apiplataforma.online"
+    
     global app_url_sandbox
-    app_url_sandbox = "http://localhost:3000"
+    app_url_sandbox = "https://sandbox.apiplataforma.online"
+    # app_url_sandbox = "http://localhost:3000"
     global app_url_pro
     app_url_pro = "https://intercam.apiplataforma.online"
 
@@ -69,7 +69,7 @@ class Apiintercambiador:
         return response.text
 
 
-ai = Apiintercambiador("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0aW1lIjoiTW9uIE1heSAzMCAyMDIyIDE2OjQxOjA1IEdNVCswMjAwIChob3JhIGRlIHZlcmFubyBkZSBFdXJvcGEgY2VudHJhbCkiLCJ1c2VySWQiOiI2Mjk0YmM3ZGU1ODVlODhiODYxNzYzZDAiLCJpYXQiOjE2NTM5MjE2NjV9.pqFNn58pI4dlRQGkSQzqQD6CukiZWiX17KEcbFJV-Ew", True)
+# ai = Apiintercambiador("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0aW1lIjoiTW9uIE1heSAzMCAyMDIyIDE2OjQxOjA1IEdNVCswMjAwIChob3JhIGRlIHZlcmFubyBkZSBFdXJvcGEgY2VudHJhbCkiLCJ1c2VySWQiOiI2Mjk0YmM3ZGU1ODVlODhiODYxNzYzZDAiLCJpYXQiOjE2NTM5MjE2NjV9.pqFNn58pI4dlRQGkSQzqQD6CukiZWiX17KEcbFJV-Ew", True)
 
 #####
 #GET all properties
@@ -183,7 +183,7 @@ ai = Apiintercambiador("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0aW1lIjoiTW9uIE1
 #DELETE properties
 #####
 
-data = ["6299fbf85500288ed8a81cd7","6299fbf85500288ed8a81cdb"]
+# data = ["6299fbf85500288ed8a81cd7","6299fbf85500288ed8a81cdb"]
 
-print(ai.deleteProperty(data))
+# print(ai.deleteProperty(data))
 
