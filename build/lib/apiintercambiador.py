@@ -9,8 +9,9 @@ class Apiintercambiador:
     global app_url_pro
     app_url_pro = "https://intercam.apiplataforma.online"
 
-    def __init__(self, token, sandbox):
+    def __init__(self, token, source_token, sandbox):
         self.token = token
+        self.source_token = source_token
         if sandbox:
             self.url = app_url_sandbox
         else:
@@ -22,7 +23,8 @@ class Apiintercambiador:
         payload={}
         headers = {
             'Content-Type': 'application/json',
-            'x-access-token': self.token
+            'x-access-token': self.token,
+            'source-token': self.source_token
         }
 
         response = requests.request("GET", url, headers=headers, data=payload)
@@ -30,11 +32,12 @@ class Apiintercambiador:
         return response.text
     
     def addProperty(self, listProperties):
-        url = self.url + "/properties"
+        url = self.url + "/api-intercambiador"
 
         payload = json.dumps(listProperties)
         headers = {
             'x-access-token': self.token,
+            'source-token': self.source_token,
             'Content-Type': 'application/json'
         }
 
@@ -43,11 +46,12 @@ class Apiintercambiador:
         return response.text
 
     def updateProperty(self, listProperties):
-        url = self.url + "/properties"
+        url = self.url + "/api-intercambiador"
 
         payload = json.dumps(listProperties)
         headers = {
             'x-access-token': self.token,
+            'source-token': self.source_token,
             'Content-Type': 'application/json'
         }
 
@@ -56,11 +60,12 @@ class Apiintercambiador:
         return response.text
 
     def deleteProperty(self, listProperties):
-        url = self.url + "/properties"
+        url = self.url + "/api-intercambiador"
 
         payload = json.dumps(listProperties)
         headers = {
             'x-access-token': self.token,
+            'source-token': self.source_token,
             'Content-Type': 'application/json'
         }
 

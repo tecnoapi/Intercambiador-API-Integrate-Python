@@ -4,7 +4,7 @@ from setuptools import find_packages, setup
 
 setup(
     name='apiintercambiador',
-    version='0.0.2',
+    version='0.0.3',
     description='Librería para transferir información entre API Intercambiador y las fuentes de datos.' ,
     long_description=(pathlib.Path(__file__).parent / "README.md").read_text(encoding='utf-8'),
     long_description_content_type="text/markdown",
