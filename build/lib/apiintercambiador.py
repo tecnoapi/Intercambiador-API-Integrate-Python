@@ -7,7 +7,7 @@ class Apiintercambiador:
     app_url_sandbox = "https://sandbox.apiplataforma.online"
     # app_url_sandbox = "http://localhost:3000"
     global app_url_pro
-    app_url_pro = "https://intercam.apiplataforma.online"
+    app_url_pro = "https://apiplataforma.online"
 
     def __init__(self, token, source_token, sandbox):
         self.token = token
